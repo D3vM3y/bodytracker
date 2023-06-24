@@ -2,13 +2,8 @@
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 
-// const window_height = window.innerHeight;
-// const window_width = window_height;
-
-// canvas.width = window_width;
-// canvas.width = window_height;
-canvas.width = 300;
-canvas.height = 800;
+canvas.width = 800;
+canvas.height = 300;
 
 canvas.style.background = "red";
 
@@ -17,3 +12,21 @@ canvas.style.background = "red";
 // 2. #AAD2BA
 // 3. #D9FFF5
 // 4. #B9F5D8
+
+context.beginPath();
+context.moveTo(0,0);
+context.lineTo(canvas.width, canvas.height);
+context.stroke();
+
+// how dataPoint works >> stores the values based on the day entered. 
+const dataPoint = {
+    year,
+    month,
+    date,
+    weight,
+    bmi,
+    bodyfat,
+}
+
+// how data works >> const data = [{dataPoint1},{dataPoint2},{dataPoint3}];
+const data = [];
